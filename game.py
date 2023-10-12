@@ -86,8 +86,8 @@ async def send_to(tg_ids, msg, conn, bot_instance=None):
             msg_to_write = await bot_instance.send_message(tg_id, msg['body']['text'],
                                                            parse_mode=msg['body']['parse_mode'])
             await db.update_user_msg_id(conn, tg_id, msg_to_write.message_id)
-        elif msg['type'] == 'location':
-            await bot_instance.send_location(tg_id, msg['body']['latitude'], msg['body']['longitude'])
+        # elif msg['type'] == 'location':
+        #     await bot_instance.send_location(tg_id, msg['body']['latitude'], msg['body']['longitude'])
         elif msg['type'] == 'photo':
             print('send_photo')
         elif msg['type'] == 'audio':
