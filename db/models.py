@@ -1,6 +1,6 @@
 import datetime
 
-from sqlalchemy import MetaData, Table, Column, Integer, Boolean, String, ForeignKey, DateTime
+from sqlalchemy import MetaData, Table, Column, Integer, Boolean, String, ForeignKey, DateTime, BigInteger
 
 __all__ = ['user', 'team', 'task', 'team_task', 'game_state']
 
@@ -43,8 +43,8 @@ task = Table(
 user = Table(
     'user', meta,
 
-    Column('id', Integer, primary_key=True),
-    Column('tg_id', Integer, nullable=False),
+    Column('id', BigInteger, primary_key=True),
+    Column('tg_id', BigInteger, nullable=False),
     Column('team_fk', Integer, ForeignKey('team.id', ondelete='RESTRICT', onupdate='CASCADE')),
     Column('last_msg_id', Integer, nullable=True),
     Column('username', String),
