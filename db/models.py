@@ -59,5 +59,5 @@ team_task = Table(
     Column('is_finished', Boolean, nullable=False, default=False),
     Column('is_current', Boolean, nullable=False, default=False),
     Column('is_loc_sent', Boolean, nullable=False, default=False),
-    Column('auto_finish', Integer, nullable=False, default=1800)
+    Column('auto_finish', Integer, nullable=False, default=1200)
 )

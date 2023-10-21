@@ -150,7 +150,7 @@ async def send_next_tesk(tg_id, conn):
     tg_ids = await get_all_teammates_tgs(conn, tg_id)
     if not await check_if_not_finished_by_user(conn, tg_id):
         task = await get_team_current(conn, tg_id)
-        msg = msg_template(task, 420, None, 1020, None, 1800, None)
+        msg = msg_template(task, 600, None, 1200, None)
         msg = {
             'type': 'text',
             'body': {
@@ -200,7 +200,6 @@ if __name__ == '__main__':
     load_env()
 
     set_up_logging(os.getenv('LOG_FILE'), os.getenv('VERBOSE') == 'True')
-
 
     if os.getenv('INIT_DB') == 'True':
         from db.init_db import init_db

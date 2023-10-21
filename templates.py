@@ -59,14 +59,13 @@ def correct_answer_template(tg_user, tg_name):
     }
 
 
-def msg_template(text, time_first, first_p, time_second, second_p, time_third, third_p):
+def msg_template(text, time_first, first_p, time_second, second_p):
     return f"""*ЗАВДАННЯ!*
 
 {text}
 
 *{strftime("%M:%S", gmtime(time_first))}*: {'_Ще недоступне_' if first_p is None else first_p}
-*{strftime("%M:%S", gmtime(time_second))}*: {'_Ще недоступне_' if second_p is None else 'Локація нижче'}
-*{strftime("%M:%S", gmtime(time_third))}*: {'_Ще недоступне_' if third_p is None else third_p}
+*{strftime("%M:%S", gmtime(time_second))}*: {'_Ще недоступне_' if second_p is None else second_p}
     """
 
 
@@ -97,11 +96,11 @@ def final_msg_template():
         'body': {
             'text': f"""Сподіваємось, що тобі все сподобалося. Фідбек щодо самого квесту ти можеш (а ще краще _повинен_) залишити своїм Бадді, якщо хочеш, щоб ми проводили таке в подальшому і ще й краще. 
 
-Відгук щодо бота можеш залишити @dimazhornyk
-
 Не забудь подякувати своїм *Бадді*!
 
 Спосібо за бота: @kirillkundik
+
+Окреме пасіба поважним товаріщам @heliochromatic та @itsgreedyjew (можна в інсті підписаться якщо що)
 
 """,
             'parse_mode': 'Markdown'

@@ -66,7 +66,7 @@ async def start_game(db_en, bot_):
             await change_game_state()
             tg_ids = await db.get_all_tg_ids(conn)
             first_task = await db.get_first_task(conn)
-            msg = msg_template(first_task, 420, None, 1020, None, 1800, None)
+            msg = msg_template(first_task, 600, None, 1200, None)
             msg = {
                 'type': 'text',
                 'body': {
@@ -103,38 +103,27 @@ async def edit_message(tg_id, msg_id, msg, bot_instance=None, parse_mode='Markdo
 async def process_team_task(db_row, conn):
     team_id = db_row[0]
     auto_finish = db_row[1]
-    is_loc_sent = db_row[2]
     name = db_row[3]
-    location = db_row[4]
     description = db_row[5]
     last_msg = db_row[6]
 
     if auto_finish < 0:
         return
 
-    time_first = auto_finish - 1380
+    time_first = auto_finish - 600
     if time_first <= 0:
         time_first = 0
     else:
         description = None
     teammates = await db.get_teams_msg_ids(conn, team_id)
 
-    time_second = auto_finish - 780
+    time_second = auto_finish
     if time_second <= 0:
         time_second = 0
-        if not is_loc_sent:
-            await db.sent_loc_to_team(conn, team_id)
-            await send_to([x[0] for x in teammates], json.loads(location), conn)
-    else:
-        location = None
-
-    time_third = auto_finish
-    if time_third <= 0:
-        time_third = 0
     else:
         last_msg = None
 
-    text = msg_template(name, time_first, description, time_second, location, time_third, last_msg)
+    text = msg_template(name, time_first, description, time_second, last_msg)
 
     for teammate in teammates:
         tg_id = teammate[0]

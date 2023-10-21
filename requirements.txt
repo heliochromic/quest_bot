@@ -1,4 +1,4 @@
-aiogram==2.2
+aiogram==2.25.1
 aiopg[sa]
 uvloop==0.13.0
 python-dotenv==0.10.3

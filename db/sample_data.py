@@ -1,159 +1,159 @@
 import json
 
 
-def get_tasks():
-    return [
-        {
-            'task_num': 0,
-            'name': "Entrypoint, the answer is *123*  [google](https://google.com)",
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 32.1234
-                }
-            }),
-            'description': 'Desc',
-            'answer': '123',
-            'need_to_approved': False,
-            'last_msg': 'Last msg of the task',
-            'is_final': False
-        },
-        {
-            'task_num': 1,
-            'name': 'Not an Entrypoint: 1233',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 31.1234
-                }
-            }),
-            'description': 'Desc one',
-            'answer': '1233',
-            'need_to_approved': True,
-            'last_msg': 'Last msg of the task',
-            'is_final': False
-        },
-        {
-            'task_num': 2,
-            'name': 'Ne Entrypoint: 1234',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 34.1234
-                }
-            }),
-            'description': 'desc Desc',
-            'answer': '1234',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': False,
-            'is_final': False
-        },
-        {
-            'task_num': 3,
-            'name': 'Finish point: 12345',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '12345',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': False
-        },
-        {
-            'task_num': 4,
-            'name': 'NE  inish point: 123456',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '123456',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': False
-        },
-        {
-            'task_num': 5,
-            'name': 'nish point: 1234567',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '1234567',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': False
-        },
-        {
-            'task_num': 6,
-            'name': 'inish point: 12345',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '12345',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': False
-        },
-        {
-            'task_num': 7,
-            'name': 'point: 2345',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '2345',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': False
-        },
-        {
-            'task_num': 8,
-            'name': 'Finish point: 12345',
-            'location': json.dumps({
-                "type": "location",
-                "body": {
-                    "latitude": 50.1234,
-                    "longitude": 33.1234
-                }
-            }),
-            'description': 'Desc of finish task',
-            'answer': '12345',
-            'last_msg': 'Last msg of the task',
-            'need_to_approved': True,
-            'is_final': True
-        },
-    ]
+# def get_tasks():
+#     return [
+#         {
+#             'task_num': 0,
+#             'name': "Entrypoint, the answer is *123*  [google](https://google.com)",
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 32.1234
+#                 }
+#             }),
+#             'description': 'Desc',
+#             'answer': '123',
+#             'need_to_approved': False,
+#             'last_msg': 'Last msg of the task',
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 1,
+#             'name': 'Not an Entrypoint: 1233',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 31.1234
+#                 }
+#             }),
+#             'description': 'Desc one',
+#             'answer': '1233',
+#             'need_to_approved': True,
+#             'last_msg': 'Last msg of the task',
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 2,
+#             'name': 'Ne Entrypoint: 1234',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 34.1234
+#                 }
+#             }),
+#             'description': 'desc Desc',
+#             'answer': '1234',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': False,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 3,
+#             'name': 'Finish point: 12345',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '12345',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 4,
+#             'name': 'NE  inish point: 123456',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '123456',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 5,
+#             'name': 'nish point: 1234567',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '1234567',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 6,
+#             'name': 'inish point: 12345',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '12345',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 7,
+#             'name': 'point: 2345',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '2345',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': False
+#         },
+#         {
+#             'task_num': 8,
+#             'name': 'Finish point: 12345',
+#             'location': json.dumps({
+#                 "type": "location",
+#                 "body": {
+#                     "latitude": 50.1234,
+#                     "longitude": 33.1234
+#                 }
+#             }),
+#             'description': 'Desc of finish task',
+#             'answer': '12345',
+#             'last_msg': 'Last msg of the task',
+#             'need_to_approved': True,
+#             'is_final': True
+#         },
+#     ]
 
 
 def get_prod_tasks():
     return [
     {
-        'task_num': 1,
+        'task_num': 0,
         'name': "Чому дорівнює фреш?",
         'description': '_... курсу приготуватись!_',
         'last_msg': '_Першому_ курсу приготуватись!',
@@ -162,7 +162,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 2,
+        'task_num': 1,
         'name': "Афон чи *Самсон*?",
         'description': 'Знайдіть Самсона з 🦁',
         'last_msg': 'Прямуйте до фонтану Самсон і Ротонда',
@@ -171,7 +171,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 3,
+        'task_num': 2,
         'name': "На реконструкції довше за Староакадемічний. [дата побудови] - [дата початку реконструкції] = *ОК*.",
         'description': 'Точно *гостинніший* третього корпуса',
         'last_msg': 'Success status code',
@@ -180,7 +180,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 4,
+        'task_num': 3,
         'name': "Провести всю неділю на *КМЦ* звучить *_спокусливо_*, але за вами слідкують.",
         'description': 'У стін є вуха, а у дерев – (https://www.youtube.com/shorts/AW5kwx9Bsdc)',
         'last_msg': 'Порахуйте очі намальовані на деревах на кмц',
@@ -189,7 +189,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 5,
+        'task_num': 4,
         'name': "[Це що?](https://t.me/buddynaukma/463), а [це що?](https://i.imgur.com/dJcQea5.jpg)",
         'description': 'салат? шифр? хто ти?',
         'last_msg': 'любите хокку? Велике дерево, зручна лавка, сад, сам, колишній портер',
@@ -198,7 +198,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 6,
+        'task_num': 5,
         'name': "“Non-geographic numbers charged at standard geographic area code rates (introduced in 2007) – x qhhg wr jr wr vsdvnd wkluwhhq",
         'description': 'Григорій Савич Єяаіараґц. До речі, а ви читали зранку цмгяґае?',
         'last_msg': 'Вася дуже любить мєми, а який твій улюблений? Покажи.',
@@ -207,7 +207,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 7,
+        'task_num': 6,
         'name': "А куди б сходити *цього місяця*?",
         'description': 'який твій улюблений попкорн?',
         'last_msg': 'Біля кінотеатра "Жовтень" на вас чекають',
@@ -216,7 +216,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 8,
+        'task_num': 7,
         'name': "Що _посієш_ – те й пожнеш.",
         'description': 'Де б купити свіжих овочів?',
         'last_msg': 'Вам потрібно до житнього ринку.',
@@ -225,8 +225,8 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 9,
-        'name': "імпорт Ноти;\n   функ отримати_слово():\n  	      стрічка фі = “фі”;\n         ретюрн фі + Ноти[0];",
+        'task_num': 8,
+        'name': "[тиць](https://pastebin.pl/view/de632a9f)",
         'description': 'Знайдіть найбільш айтішну студ організацію',
         'last_msg': 'Знайдіть FIdo',
         'answer': '129',
@@ -234,7 +234,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 10,
+        'task_num': 9,
         'name': "Їх у родині багато: Сарна, Аксис, Гемал. Але на Подолі він лише один.",
         'description': 'Знайдеш на стіні',
         'last_msg': 'Ідіть до проїжджої частини навпроти мурала з оленем на вулиці Волоської',
@@ -243,7 +243,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 11,
+        'task_num': 10,
         'name': "Pour manger? - Allons au _Блукач_",
         'description': 'Заблукав на вулиці іншого блукача',
         'last_msg': 'Бариста у Вагабонді не такий простий як здається на перший погляд',
@@ -252,7 +252,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 12,
+        'task_num': 11,
         'name': "[завдання](https://i.imgur.com/QkDReY2.jpg)",
         'description': 'Як добре, що прапор _Каннади_ тут ні до чого. Пошукайте, як справжні каннадійці пишуть цифри.',
         'last_msg': 'Зашифровані древньою мовою каннада координати привели вас до кафе 119, подивіться на неї ближче до дороги',
@@ -261,7 +261,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 13,
+        'task_num': 12,
         'name': "Архангел тіней забутих родичів назавжди закарбувався у гербі. Прямуйте в кав'ярню за вулицею [третього засновника], 25.",
         'description': 'Згадай засновників Києва',
         'last_msg': 'Залежність страшна річ, особливо, коли вона від еспресо, а як кличуть залежних від еспресо?',
@@ -270,7 +270,7 @@ def get_prod_tasks():
         'is_final': False
     },
     {
-        'task_num': 14,
+        'task_num': 13,
         'name': "На Подолі їх два: один зверху, другий знизу, паралельні один одному і перетинаються двічі. "
                 "Вам потрібна точка ближче до Дніпра. Там і зустрінемось на фінальне завдання.",
         'description': 'Перетин вулиць Нижній та Верхній вал.',
